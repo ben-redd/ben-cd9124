@@ -1,0 +1,61 @@
+steps:
+  STG_DAILY_14_TOTAL_SHORT8-caa92099-2f92-4fea-bd7e-4189d6c441b2:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: WORK
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: ee90e362-b24c-4720-ae83-a2dda2ad1ad7
+              stepCounter: caa92099-2f92-4fea-bd7e-4189d6c441b2
+            dataType: VARIANT
+            description: ""
+            name: V
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1756fb3d-eb55-4c22-ad0c-54f0d9b341f3
+                    stepCounter: 63543cec-3558-43e2-9a1a-defe7a603caa
+                transform: ""
+          - columnReference:
+              columnCounter: aae4a2da-0465-4c67-b15f-40c890779a22
+              stepCounter: caa92099-2f92-4fea-bd7e-4189d6c441b2
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            name: T
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ce0e8a54-1958-4a5a-b334-77cec092f51d
+                    stepCounter: 63543cec-3558-43e2-9a1a-defe7a603caa
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: WORK
+                nodeName: STG_DAILY_14_TOTAL_SHORT2
+            join:
+              joinCondition: FROM {{ ref('WORK', 'STG_DAILY_14_TOTAL_SHORT2') }} "STG_DAILY_14_TOTAL_SHORT2"
+            name: STG_DAILY_14_TOTAL_SHORT8
+            noLinkRefs: []
+      name: STG_DAILY_14_TOTAL_SHORT8
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: caa92099-2f92-4fea-bd7e-4189d6c441b2
